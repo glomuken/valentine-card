@@ -1,0 +1,36 @@
+<div class="centered-container bg-pink-100">
+    <!-- A5 Page with Black Outline and Red Inside Border -->
+    <div class="a5-page relative z-10">
+      <div class="a5-page-inner">
+        <div class="a5-content">
+          <!-- Heart Above the Message -->
+          <div class="absolute top-[10px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <span *ngFor="let i of [].constructor(12)" class="text-pink-600 text-xl">&#10084;</span>
+          </div>
+  
+          <h1 class="text-4xl font-bold text-pink-600">Happy Valentine's Day!</h1>
+  
+          <p class="text-gray-700 mt-6">Wishing you lots of love and happiness.</p>
+  
+          <h2 class="text-red-600 text-3xl font-bold font-cursive mt-6">Will you be my Valentine?</h2>
+  
+          <div class="flex justify-center space-x-4 mt-4">
+            <button (click)="onYesClick()" class="bg-blue-300 border border-blue-700 text-black-700 hover:bg-blue-700 border border-blue-300 hover:text-black-700 px-6 py-2 rounded">Yes</button>
+            <button (click)="onNoClick()" class="bg-green-300 border border-green-700 text-black-700 hover:bg-green-700 border border-green-300 hover:text-black-700 px-6 py-2 rounded">No</button>
+          </div>
+        
+  
+          <!-- Heart Below the Message -->
+          <div class="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <span *ngFor="let i of [].constructor(12)" class="text-pink-600 text-xl">&#10084;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Falling Hearts -->
+    <div *ngFor="let item of fallingItems" class="falling-item" [ngStyle]="getItemStyle(item)">
+      {{ item.symbol }}
+    </div>
+  </div>
+  

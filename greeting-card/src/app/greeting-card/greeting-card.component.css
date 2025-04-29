@@ -1,0 +1,60 @@
+/* Ensure the animation falls from top */
+.falling-item {
+    position: absolute;
+    top: -10%;
+    font-size: 5rem;
+    animation: fall linear infinite;
+    transition: all 0.2s ease;
+  }
+  
+  /* Slower falling animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(-10vh);
+    }
+    100% {
+      transform: translateY(110vh); 
+    }
+  }
+  
+  /* Centered A5 Page with Red Border and Black Outline */
+  .a5-page {
+    background-color: white;
+    width: 200mm; /* Horizontal A5: long side at the top */
+    height: 120mm; /* A5 height */
+    border: 4px inset black; /* Black outline */
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Red border inside the black outline */
+  .a5-page-inner {
+    background-color: white;
+    border: 3px dotted red; /* Inside red border */
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Centering content inside the A5 page */
+  .a5-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Centering the outer container */
+  .centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+  }
+  
