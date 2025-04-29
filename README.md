@@ -1,2 +1,3 @@
-# valentine-card
-Basic angular valentine card
+# card
+
+Basic Valentine's day card
